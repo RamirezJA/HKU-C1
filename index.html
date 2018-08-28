@@ -36,14 +36,14 @@
                             Contact</a></li>
                 </ul>
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
+                    <a id="lBtn">
                         <span class="fa fa-sign-in"></span> Login</a>
                 </span>
             </div>
         </div>
     </nav>
 
-    <div id="loginModal" class="modal fade" role="dialog">
+    <div class="modal fade" id="lModal" role="dialog">
         <div class="modal-dialog modal-lg" role="content">
             <!-- Modal content-->
             <div class="modal-content">
@@ -92,7 +92,7 @@
                     <img src="img/logo.png" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm-3 align-self-center">
-                    <button type="button" class="btn btn-warning btn-sm btn-block text-dark" data-toggle="modal" data-target="#exampleModal">
+                    <button type="button" class="btn btn-warning btn-sm btn-block text-dark" id="rBtn">
                         Reserve Table
                     </button>
 
@@ -285,8 +285,8 @@
     </div>
 
 
-
-    <div id="exampleModal" class="modal fade" role="dialog">
+<!--Reserve Modal-->
+    <div id="rModal" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg" role="content">
             <!-- Modal content-->
             <div class="modal-content">
@@ -411,6 +411,14 @@
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script>
         $(document).ready(function(){
+            $("#rBtn").click(function(){
+                $("#rModal").modal();
+            });
+
+            $("#lBtn").click(function(){
+                $("#lModal").modal();
+            });
+
             $("#mycarousel").carousel( { interval: 2000 } );
             $("#carouselButton").click(function(){
                 if ($("#carouselButton").children("span").hasClass('fa-pause')) {
