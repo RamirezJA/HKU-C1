@@ -8,7 +8,7 @@
                 $("#lModal").modal('toggle');
             });
 
-            $("#mycarousel").carousel( { interval: 2000 } );
+            $("#mycarousel").carousel( { interval: 1 } );
             $("#carouselButton").click(function(){
                 if ($("#carouselButton").children("span").hasClass('fa-pause')) {
                     $("#mycarousel").carousel('pause');
